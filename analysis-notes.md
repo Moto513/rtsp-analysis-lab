@@ -101,6 +101,12 @@ This step verifies whether the RTSP session was established correctly.
 
 A successful RTSP session indicates that the client and camera successfully negotiated the stream.
 
+### RTSP Filter Example
+
+The following screenshot shows the RTSP control flow, including OPTIONS, DESCRIBE, SETUP, PLAY, and GET_PARAMETER.
+
+![RTSP filter result](images/wireshark-rtsp-filter.png)
+
 ---
 
 ## Step 4: Analyze RTP Media Packets
@@ -168,6 +174,12 @@ A sudden SSRC change may indicate:
 
 If RTP sequence numbers are continuous, network packet loss is less likely to be the cause of video stuttering.
 
+### RTP Sequence Number Example
+
+The following screenshot shows RTP packets with continuous sequence numbers and RTP details such as payload type and SSRC.
+
+![RTP sequence number detail](images/wireshark-rtp-sequence-detail.png)
+
 ---
 
 ## Step 5: Analyze RTCP Receiver Reports
@@ -205,6 +217,12 @@ Example fields that may appear in RTCP reports:
 
 Some devices may send simplified RTCP Receiver Reports with limited detail.  
 In that case, RTP sequence numbers should also be checked directly.
+
+### RTCP Receiver Report Example
+
+The following screenshot shows RTCP Receiver Report packets.
+
+![RTCP Receiver Report](images/wireshark-rtcp-receiver-report.png)
 
 ---
 
